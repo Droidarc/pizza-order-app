@@ -1,0 +1,18 @@
+li {
+    display: inline;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.carousel-item{
+    height: 500px;
+}
+.carousel-item img{
+    height: 500px;
+}
+
+.btn-group {
+  margin: 10px auto;
+}
