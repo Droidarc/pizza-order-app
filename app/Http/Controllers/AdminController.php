@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ProductCreateRequest;
 use App\Product;
 use App\ProductDetail;
 use App\Category;
@@ -25,7 +26,7 @@ class AdminController extends Controller
       return view('admin.product.create');
     }
 
-    public function productStore(Request $request)
+    public function productStore(ProductCreateRequest $request)
     {
       if($file = $request->file('picture'))
       {
@@ -40,10 +41,11 @@ class AdminController extends Controller
           'type' => $request->type,
           'picture' => $filename
       ]);
-
+      /*
       $productDetail = ProductDetail::create([
           'product_id' => $product->id
       ]);
+      */
 
       $product->save();
       return redirect()->route('admin.product');

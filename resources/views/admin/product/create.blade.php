@@ -50,4 +50,5 @@
   </form>
 </div>
 </div>
+@include('partials.error')
 @endsection

@@ -14,12 +14,10 @@ class CreateTrigger extends Migration
     public function up()
     {
       DB::unprepared('
-      CREATE TRIGGER no_normie AFTER INSERT ON `users` FOR EACH ROW
+      CREATE TRIGGER order66 AFTER INSERT ON `products` FOR EACH ROW
           BEGIN
-              IF NEW.id > 99 THEN
-              SIGNAL SQLSTATE "45000"
-              SET MESSAGE_TEXT = "normie get out";
-              END IF;
+              INSERT INTO product_details (`product_id`, `created_at`, `updated_at`)
+              VALUES (NEW.id, now(), now());
           END
       ');
     }
@@ -31,7 +29,7 @@ class CreateTrigger extends Migration
      */
     public function down()
     {
-      DB::unprepared('DROP TRIGGER `no_normie`');
+      DB::unprepared('DROP TRIGGER `order66`');
 
     }
 }

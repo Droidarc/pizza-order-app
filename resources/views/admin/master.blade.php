@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Hello, world!</title>
+    <title>pizza-order-app</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
@@ -25,13 +25,10 @@
       Tip 2: you can also add an image using data-image tag
   -->
     <div class="logo">
-      <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-        CT
+      <a href="#" class="simple-text logo-mini">
+        ADM
       </a>
 
-      <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-       Creative Tim
-      </a>
     </div>
 
     <div class="sidebar-wrapper">
@@ -89,20 +86,14 @@
     <footer class="footer">
       <div class="container-fluid">
         <nav class="float-left">
-          <ul>
-              <li>
-                  <a href="https://www.creative-tim.com">
-                      Creative Tim
-                  </a>
-              </li>
-          </ul>
+
         </nav>
         <div class="copyright float-right">
             &copy;
             <script>
                 document.write(new Date().getFullYear())
-            </script>, made with <i class="tim-icons icon-heart-2"></i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+            </script>
+
         </div>
 
          <!-- your footer here -->
