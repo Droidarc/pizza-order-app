@@ -71,9 +71,17 @@ class AdminController extends Controller
       $product->title = $request->title;
       $product->ingredients = $request->ingredients;
       $product->price = $request->price;
-      $product->productDetail->show_slider = $request->show_slider;
+      if($product->type=="discount")
+      {
+        $product->productDetail->show_slider = $request->show_slider;
+        $product->productDetail->save();
+      }
 
-      $product->productDetail->save();
+      if($product->type=="pizza")
+      {
+        $product->productDetail->is_selected = $request->is_selected;
+        $product->productDetail->save();
+      }
       $product->save();
       return redirect()->route('admin.product');;
     }

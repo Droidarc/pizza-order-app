@@ -69,6 +69,28 @@
 </div>
 @endif
 
+@if($product->type=="pizza")
+  <div class="card">
+    <div class="alert alert-default" role="alert">
+      Sefin secimi?
+    </div>
+<div class="card-body">
+  <div class="form-check form-check-radio form-check-inline">
+    <label class="form-check-label">
+      <input class="form-check-input" type="radio" name="is_selected" id="is_selected" value="1" {{ $product->productDetail->is_selected == 1 ? 'checked' : '' }}> Olsun
+      <span class="form-check-sign"></span>
+    </label>
+  </div>
+  <div class="form-check form-check-radio form-check-inline">
+    <label class="form-check-label">
+      <input class="form-check-input" type="radio" name="is_selected" id="is_selected" value="0" {{ $product->productDetail->is_selected == 0 ? 'checked' : '' }}> Olmasın
+      <span class="form-check-sign"></span>
+    </label>
+  </div>
+</div>
+</div>
+@endif
+
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>

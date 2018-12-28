@@ -19,6 +19,7 @@ class CreateProductDetailsTable extends Migration
             $table->string('size')->nullable();
             $table->boolean('show_slider')->default(0);
             $table->boolean('is_selected')->default(0);
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->timestamps();
         });
     }
