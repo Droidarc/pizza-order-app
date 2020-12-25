@@ -1,3 +1,4 @@
+<h3>The project is archived due to decision on not to develop further more</h3>
 <ul>
     <li>git clone -link-</li>
     <li>cp .env.example .env</li>
